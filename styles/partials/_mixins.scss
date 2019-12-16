@@ -1,0 +1,21 @@
+@import "./variables";
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: minmax(1fr, calculateRem(200px)), 1fr, 1fr, 1fr, 1fr;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin button {
+  height: 44px;
+  width: 144px;
+  background: $color-btn-primary;
+  cursor: pointer;
+  border-radius: 5px;
+  color: $text-color;
+  font-size: $font-size-btn;
+}

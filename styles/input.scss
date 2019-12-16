@@ -1,0 +1,22 @@
+@import "partials/_reset";
+@import "partials/_variables";
+@import "partials/_fonts";
+@import "partials/_mixins";
+@import "partials/_layout";
+@import "components/_accordionComponent";
+@import "components/_FormComponent";
+@import "components/_GraphComponent";
+@import "components/_listComponent";
+@import "components/_ModalComponent";
+@import "components/_NavigationComponent";
+@import "components/_ProfileComponent";
+@import "components/_sidebarComponent";
+
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+.btn {
+  @include button;
+}

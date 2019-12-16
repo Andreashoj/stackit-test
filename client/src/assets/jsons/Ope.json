@@ -1,0 +1,51 @@
+[
+  {
+    "_id": 0,
+    "name": "Tobias",
+    "machines": [
+      {
+        "_id": 3456,
+        "EstTime": "1.50",
+        "Progress": 34,
+        "status": false
+      },
+      {
+        "_id": 2399,
+        "EstTime": "2.49",
+        "Progress": 70,
+        "status": true
+      },
+      {
+        "_id": 1332,
+        "EstTime": "1.30",
+        "Progress": 89,
+        "status": true
+      }
+    ]
+  },
+
+  {
+    "_id": 1,
+    "name": "Tobias",
+    "machines": [
+      {
+        "_id": 3456,
+        "EstTime": "1.50",
+        "Progress": 34,
+        "status": false
+      },
+      {
+        "_id": 2399,
+        "EstTime": "2.49",
+        "Progress": 70,
+        "status": true
+      },
+      {
+        "_id": 1332,
+        "EstTime": "1.30",
+        "Progress": 89,
+        "status": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "_id": 0,
+    "name": "Hr-on",
+    "adminId": 1
+  },
+  {
+    "_id": 1,
+    "name": "RobotWorld",
+    "adminId": 4
+  },
+  {
+    "_id": 2,
+    "name": "Faetter BR",
+    "adminId": 13
+  },
+  {
+    "_id": 3,
+    "name": "Lokale koisk",
+    "adminId": 34
+  }
+]

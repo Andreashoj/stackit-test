@@ -1,0 +1,17 @@
+<!--Modal activator, click to display/hide modal 
+	toggles modal--hidden class on modal section with inline js for now-->
+<a href="#" onclick="document.getElementById('modal').classList.toggle('modal--hidden')">Open Modal</a>
+
+<!--Modal content, to be dynamically displayed/hidden -->
+<section id="modal" class="modal modal--hidden">
+	<div class="modal__wrapper">
+		<header class="modal__header">
+			<h2 class="modal__title">Modal Header</h2>
+			<a class="modal__close" title="Luk" href="#"
+				onclick="document.getElementById('modal').classList.toggle('modal--hidden')">&#x2715;</a>
+		</header>
+		<div class="modal__content">
+			<p>Dummy content</p>
+		</div>
+	</div>
+</section>

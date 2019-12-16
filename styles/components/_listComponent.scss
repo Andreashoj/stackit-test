@@ -1,0 +1,29 @@
+/*
+  List Component
+*/
+
+.lists {
+    background: $bg-color-secondary;
+    .title-wrapper{
+      color: $text-color;
+    }
+    .title-list{
+      padding: $font-padding;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $bg-color-primary;
+    }
+    .list-wrapper {
+      .list {
+        display: flex;
+        padding:$font-padding;
+        justify-content: space-between;
+        border-bottom: 1px solid $bg-color-primary;
+      }
+    }
+    .list__item {
+      flex:1;
+      color: $text-color; 
+    }
+  
+  }

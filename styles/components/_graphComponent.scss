@@ -1,0 +1,26 @@
+//  Graph Component
+.graph-section{
+    background-color: $bg-color-secondary;
+    width: 75%;
+    padding: 5px;
+
+    .graph-section__wrapper{
+      padding: 2%;
+
+      h3{
+        color: $text-color;
+        font-size: 20px;
+        padding: 4px;
+        margin: 2.5%;
+
+      }
+      .graph-section__graphs{
+        width: 95%;
+        background-color: white;
+        height: 300px;
+        padding: 4px;
+        margin: auto;
+
+      }
+    }
+  }

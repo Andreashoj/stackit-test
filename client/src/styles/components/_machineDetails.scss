@@ -1,0 +1,224 @@
+@import "../variables";
+@import "../mixins";
+
+.machine-details {
+  grid-area: n;
+  display: grid;
+  grid-template-columns: 1fr 20% 1fr;
+  //grid-template-rows: 1fr 1fr 1.5fr 2fr;
+  margin-bottom: 1.25rem;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "header header header"
+    "cs cs cs"
+    "jobs jobs log"
+    "sq sq log";
+  @media screen and (max-width: $screen-l) {
+    //grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "header header header"
+      "cs cs cs"
+      "jobs jobs jobs"
+      "log log log"
+      "sq sq sq";
+  }
+  .heading {
+    grid-area: header;
+  }
+  .current-stack {
+    grid-area: cs;
+    background-color: $bg-color-secondary;
+  }
+  .current-job {
+    grid-area: jobs;
+    background-color: $bg-color-secondary;
+  }
+
+  .machine-log {
+    grid-area: log;
+    background-color: $bg-color-secondary;
+    @include flex(flex-start, space-around, column);
+  }
+
+  .stack-query {
+    grid-area: sq;
+    background-color: $bg-color-secondary;
+  }
+}
+
+// Current stack
+
+.current-stack {
+  width: 100%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      font-size: 1.25rem;
+    }
+    tr {
+      height: 50px;
+    }
+    td {
+      border-top: 2px solid $bg-color-primary;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .current-stack__overtime {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .negative {
+    background-color: red;
+  }
+
+  .positive {
+    background-color: green;
+  }
+}
+
+//Current jobs
+
+.current-job {
+  width: 100%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      font-size: 1.25rem;
+    }
+    tr {
+      height: 50px;
+    }
+    td {
+      border-top: 2px solid $bg-color-primary;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+// Current query
+
+.stack-query {
+  width: 100%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      font-size: 1.25rem;
+    }
+    tr {
+      height: 50px;
+    }
+    td {
+      border-top: 2px solid $bg-color-primary;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+// Machine Log
+
+.machine-log {
+  padding: 1.25rem;
+  .log {
+    .log__id {
+      padding-left: 1.25rem;
+      margin: 0.9375rem 0 0.5rem 0;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 0.625rem;
+        width: 0.625rem;
+        border-radius: 50%;
+        left: 0px;
+        top: 0.25rem;
+      }
+    }
+    .success {
+      &:before {
+        background-color: #2d8f55;
+      }
+    }
+    .error {
+      &:before {
+        background-color: #f24444;
+      }
+    }
+    .log__item {
+      @include flex(flex-start, flex-start, column);
+    }
+  }
+}
+
+//Stack query
+
+.row-splitter {
+  display: inline-block;
+  position: absolute;
+  height: 3px;
+  width: 65%;
+  background-color: $bg-color-primary;
+  @media screen and (max-width: $screen-l) {
+    width: 84%;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  
+// Current stack
+
+  .current-stack {
+    width: 100%;
+    table {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+
+      thead, tbody{
+        width: 50%;
+      }
+
+      th {
+        margin: 0.3rem 0.1rem;
+        padding: 0.3rem;
+        
+      }
+
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: auto;
+        padding: 0.8rem 0;
+        width: 100%;
+        
+      }
+
+      td {
+        border: 0;
+        border-left: 2px solid $bg-color-primary;
+        text-align: center;
+        padding: 0.3rem;
+        margin: 0.5rem 0.1rem;
+      }
+    }
+
+    .current-stack__overtime {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin: auto;
+    }
+  }
+}

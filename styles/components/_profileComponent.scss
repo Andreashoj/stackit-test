@@ -1,0 +1,27 @@
+ // Profile Component
+ .profile-block{
+    background-color: $bg-color-secondary;
+    margin: 5px;
+    padding: 10px;;
+    //width: 20%;
+    display: inline-flex;
+    justify-content: space-between;
+
+    .profile-block-info{
+        margin: 10px;
+
+
+        .profile-block-info-text{
+            color: $text-color;
+            margin: 10px;
+
+        }
+    }
+    .profile-block-img{
+        width: 45px;
+        height: auto;
+        border-radius: 100%;
+        margin: 10px;
+
+    }
+}

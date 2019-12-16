@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #282828;
+}
+.nav-wrapper{
+  max-width: 1920px;
+  margin: auto;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}

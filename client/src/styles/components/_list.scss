@@ -1,0 +1,61 @@
+@import "../variables";
+@import "../mixins";
+
+.Ope-List {
+  grid-area: n;
+  .header {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.List-wrapper {
+  color: #fff;
+  grid-area: n;
+  margin-bottom: 1.25rem;
+  table {
+    background: $bg-color-secondary;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    th {
+      padding: 1.6rem 3.2rem;
+      font-size: 1.25rem;
+    }
+    td {
+      padding: 1.6rem 3.2rem;
+      border-top: 2px solid $bg-color-primary;
+    }
+  }
+  .listBody {
+    @include list-item-hover($bg-color-primary);
+  }
+}
+
+.crud_icon {
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: $screen-m){
+
+  .List-wrapper {
+    margin: 0 1rem;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+
+    table {
+
+      th {
+        padding: 1rem 2rem;
+
+      }
+      td {
+        padding: 1rem 2rem;
+
+      }
+    }
+    .listBody {
+    }
+  }
+
+
+}

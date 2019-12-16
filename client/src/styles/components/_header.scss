@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../mixins";
+
+.headingTitle {
+  width: 100%;
+  border-top: 0.125rem solid $bg-color-secondary;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    padding: 0.09375rem;
+    background-color: $color-primary;
+    top: -0.1875rem;
+    width: 9.375rem;
+  }
+}
+
+.heading{
+  margin-bottom: 3.2rem;
+}

@@ -1,0 +1,59 @@
+/*
+  Modal Component
+*/
+.modal {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(155, 155, 155, 0.5);
+  
+    &--hidden {
+      display: none;
+    }
+  }
+  
+  .modal__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.25rem #666;
+    color: $text-color;
+  }
+  
+  .modal__header {
+    background: $bg-color-secondary;
+    padding: 2rem 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  .modal__title {
+    font-size: $font-size-h2;
+  }
+  
+  .modal__close {
+    background: $color-btn-primary;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.1rem 0.25rem #333;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5rem;
+  }
+  
+  .modal__content {
+    background: $bg-color-primary;
+    padding: 2rem 1rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }

@@ -1,0 +1,7 @@
+**/*.css.map
+.vs/*
+StackitApi/.vs/*
+
+client/node_modules
+node_modules
+

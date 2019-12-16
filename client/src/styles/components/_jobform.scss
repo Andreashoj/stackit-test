@@ -1,0 +1,168 @@
+@import "../variables";
+@import "../mixins";
+
+.job-wrapper {
+  grid-area: n;
+  //background: $bg-color-secondary;
+
+  background: $bg-color-secondary;
+  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+fieldset {
+  border: none;
+  //width: 80%;
+  margin: 2rem auto;
+}
+
+  .form-wrapper {
+    background: $bg-color-secondary;
+    padding: 1rem 2rem;
+
+    .input-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    fieldset {
+      border: none;
+      //width: 80%;
+      margin: 2rem auto;
+
+      .form-elements {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        float: left; //skal ændres...
+
+        label {
+          color: $text-color;
+          margin: 1rem 0 0;
+          font-size: 1.25rem;
+        }
+
+        input {
+          //padding: 0.625rem;
+          //margin: 1%;
+          display: flex;
+          flex-direction: column;
+          width: 99%;
+          color: black;
+          height: 3rem;
+        }
+
+        select {
+          padding: 0.5rem;
+          //margin: 1%;
+          display: flex;
+          flex-direction: column;
+          width: 99%;
+          color: black;
+        }
+
+        .form__upload {
+          padding: 0;
+          position: relative;
+          height: 3rem;
+          display: flex;
+          flex-direction: row;
+
+          label {
+            font-size: 1.25rem;
+            color: $text-color;
+            margin: 1rem 0 0 0;
+          }
+
+          input[type="file"] {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+          }
+
+          input.upload__name {
+            flex-grow: 1;
+            margin: 0;
+          }
+          .upload__button {
+            border: none;
+            margin-top: 0;
+            align-self: baseline;
+            height: 3rem;
+            border-radius: 0;
+          }
+        }
+      }
+      .form__submit {
+        width: 9.0625rem;
+        height: 2.75rem;
+        background: linear-gradient(to right, #4563bf, #448ff2);
+        border: none;
+        color: white;
+        //font-weight: 600;
+        margin-bottom: 3%;
+        float: right;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-m) {
+    
+    .form-wrapper {
+
+      fieldset {
+
+        .input-container {
+          flex-direction: column;
+
+        .form-elements {
+
+          width: 100%;
+          float: none;
+  
+          label {
+
+          }
+  
+          input {
+
+          }
+  
+          select {
+
+          }
+  
+          .form__upload {
+
+  
+            label {
+
+            }
+  
+            input[type="file"] {
+
+            }
+  
+            input.upload__name {
+
+            }
+            .upload__button {
+
+            }
+          }
+        }
+      }
+        .form__submit {
+          width: 100%;
+          text-align: center;
+        }
+    }
+    }
+  }

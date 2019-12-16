@@ -1,0 +1,82 @@
+@import "../variables";
+@import "../mixins";
+
+.List-wrapper {
+  background: $bg-color-secondary;
+  color: #fff;
+  grid-area: n;
+  margin-bottom: 1.25rem;
+  position: relative;
+
+  .modal-add {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .modal__add {
+      height: 2rem;
+      width: 2rem;
+      background-color: $color-primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    th {
+      padding: 0.9rem 3.2rem;
+    }
+    td {
+      padding: 0.9rem 3.2rem;
+      border-top: 0.125rem solid $bg-color-primary;
+    }
+  }
+  .listBody {
+    @include list-item-hover($bg-color-primary);
+  }
+}
+
+.pagination {
+  @include flex(center, center);
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  padding-bottom: 1.25rem;
+  .active {
+    background: #4563bf;
+    a {
+      color: #fff;
+    }
+  }
+  .page-item {
+    border: 0.0625rem solid #4563bf;
+    border-radius: 50%;
+    margin-top: 1.6rem;
+    margin-right: 0.8rem;
+    color: #fff;
+    text-align: center;
+    &:hover {
+      background: #4563bf;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    a {
+      @include flex(center, center);
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      line-height: 3.125rem;
+      @media screen and (max-width: $screen-l) {
+        height: 1.875rem;
+        width: 1.875rem;
+      }
+    }
+  }
+}

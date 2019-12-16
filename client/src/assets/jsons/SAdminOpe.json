@@ -1,0 +1,29 @@
+[
+  {
+    "_id": 0,
+    "Name": "Tobias",
+    "Machine": 
+      {
+        "_id": 0,
+        "Name": "Machine 1"
+      }
+  },
+  {
+    "_id": 1,
+    "Name": "Tonnny",
+    "Machine": 
+      {
+        "_id": 1,
+        "Name": "Machine 2"
+      }
+  },
+  {
+    "_id": 2,
+    "Name": "Andreas",
+    "Machine": 
+      {
+        "_id": 2,
+        "Name": "Machine 3"
+      }
+  }
+]

@@ -1,0 +1,70 @@
+
+
+GET:	api/companies
+GET:	api/companies/{companyId}
+GET:	api/companies/cities/{cityId}
+PUT:	api/companies/{companyId}
+POST:	api/companies
+DELETE:	api/companies/{companyId}
+
+POST: api/users/authenticate
+GET:	api/users
+GET:	api/users/{userId}
+GET:	api/users/usertypes/{userTypeId}
+GET:	api/users/companies/{companyId}
+PUT:	api/users/{userId}
+POST:	api/users
+DELETE:	api/users/{userId}
+
+GET:	api/usertypes
+GET:	api/usertypes/{usertypeId}
+PUT:	api/usertypes/{usertypeId}
+POST:	api/usertypes
+DELETE:	api/usertypes/{usertypeId}
+
+GET:	api/machines
+GET:	api/machines/{machineId}
+GET:	api/machines/companies/{companyId}
+PUT:	api/machines/{machineId}
+POST:	api/machines
+DELETE:	api/machines/{machineId}
+
+GET:	api/machineoperators
+GET:	api/machineoperators/user/{userId}
+GET:	api/machineoperators/machine/{machineId}
+GET:	api/machineoperators/user/{userId}/machine/{machineId}
+POST:	api/machineoperators
+DELETE:	api/machineoperators/user/{userId}/machine/{machineId}
+
+GET:	api/statuscodes
+GET:	api/statuscodes/{statusCodeId}
+PUT:	api/statuscodes/{statusCodeId}
+POST:	api/statuscodes
+DELETE:	api/statuscodes/{statusCodeId}
+
+GET:	api/stacks
+GET:	api/stacks/{stackId}
+GET:	api/stacks/machines/{machineId}
+PUT:	api/stacks/{stackId}
+POST:	api/stacks
+DELETE:	api/stacks/{stackId}
+
+GET:	api/jobs
+GET:	api/jobs/{jobId}
+GET:	api/jobs/stacks/{stackId}
+PUT:	api/jobs/{jobId}
+POST:	api/jobs
+DELETE:	api/jobs/{jobId}
+
+GET:	api/files
+GET:	api/files/{fileId}
+PUT:	api/files/{fileId}
+POST:	api/files
+DELETE:	api/files/{fileId}
+
+GET:	api/jobfiles
+GET:	api/jobfiles/job/{jobId}
+GET:	api/jobfiles/file/{fileId}
+GET:	api/jobfiles/job/{jobId}/file/{fileId}
+POST:	api/jobfiles
+DELETE:	api/jobfiles/job/{jobId}/file/{fileId}

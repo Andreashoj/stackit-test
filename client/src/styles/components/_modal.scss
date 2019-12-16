@@ -1,0 +1,293 @@
+@import "../variables";
+@import "../mixins";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.background {
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.modal-container {
+  position: relative;
+  @include flex(flex-start, flex-start, column);
+  background: $bg-color-secondary;
+  height: 85%;
+  width: 80%;
+  max-width: 700px;
+  padding: 2rem;
+  overflow: auto;
+
+  .modal-container__fit {
+    height: 100%;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+    label {
+      margin: 1.5rem 0 0.5rem 0;
+      font-size: 1.25rem;
+    }
+    .modal__form {
+      input:nth-of-type(3) {
+        margin: 3rem 0 0 0;
+      }
+    }
+
+    //jobform style
+    fieldset {
+      border: none;
+      //width: 80%;
+      margin: 2rem auto;
+
+      .form-elements {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        float: left; //skal ændres...
+      }
+
+        label {
+          color: $text-color;
+          //margin: 1%;
+          font-size: 1.25rem;
+        }
+
+        input {
+          //padding: 0.625rem;
+          // margin: 1%;
+          display: flex;
+          flex-direction: column;
+          width: 99%;
+          color: black;
+          height: 3rem;
+        }
+
+        select {
+          padding: 0.8rem;
+          //margin: 1%;
+          display: flex;
+          flex-direction: column;
+          width: 47%;
+          float: left; //skal ændres...
+        }
+
+          label {
+            color: $text-color;
+            //margin: 1%;
+            font-size: 1.25rem;
+          }
+
+          input {
+            //padding: 0.625rem;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+            width: 99%;
+            color: black;
+            height: 3rem;
+          }
+
+          select {
+            padding: 0.8rem;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+            width: 99%;
+            color: black;
+          }
+
+          .form__upload {
+            padding: 0;
+            position: relative;
+            height: 3rem;
+            display: flex;
+            flex-direction: row;
+            input {
+              cursor: pointer;
+            }
+
+            label {
+              font-size: 1.25rem;
+              color: $text-color;
+              margin: 1%;
+            }
+
+            input[type="file"] {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              opacity: 0;
+              position: absolute;
+            }
+
+            input.upload__name {
+              flex-grow: 1;
+              margin: 0;
+            }
+            .upload__button {
+              border: none;
+              margin-top: 0;
+              align-self: baseline;
+              height: 3rem;
+              border-radius: 0;
+            }
+          }
+        
+      
+      .submit {
+        width: 9.0625rem;
+        height: 2.75rem;
+      }
+    }
+  }
+}
+  .hide {
+    display: none;
+  }
+
+
+@media screen and (min-width: $screen-l){
+
+  .modal-container {
+    height: 85%;
+    width: 80%;
+    padding: 2rem;
+    overflow: auto;
+
+    .modal-container__fit {
+      input {
+      }
+      label {
+      }
+      .modal__form {
+        input:nth-of-type(3) {
+        }
+      }
+
+      //jobform style
+      fieldset {
+        .input-container {
+
+
+          .form-elements {
+            float: none;
+            margin-top: 1rem;
+
+            label {
+            }
+
+            input {
+            }
+
+            select {
+            }
+
+            .form__upload {
+              label {
+              }
+
+              input[type="file"] {
+              }
+
+              input.upload__name {
+              }
+              .upload__button {
+              }
+            }
+          }
+        }
+
+        .submit {
+          width: 9.0625rem;
+          height: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: $screen-m) {
+  .modal-container {
+    height: 80%;
+    width: 80%;
+    padding: 2rem;
+    overflow: auto;
+
+    .modal-container__fit {
+      input {
+      }
+      label {
+      }
+      .modal__form {
+        input:nth-of-type(3) {
+        }
+      }
+    
+    //jobform style
+    fieldset {
+      margin-top: 0;
+    }
+      //jobform style
+      fieldset {
+        .input-container {
+          flex-direction: column;
+
+          .form-elements {
+            float: none;
+            width: 100%;
+            margin-top: 1rem;
+
+            label {
+            }
+
+            input {
+            }
+
+            select {
+            }
+
+            .form__upload {
+              label {
+              }
+
+              input[type="file"] {
+              }
+
+              input.upload__name {
+              }
+              .upload__button {
+              }
+            }
+          }
+        }
+
+        .submit {
+          width: 100%;
+        }
+      }
+    
+  .submit{
+    width: 100%;
+    text-align: center;
+  }
+  }
+}
+}
